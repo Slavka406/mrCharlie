@@ -52,8 +52,7 @@ const alcogol = [
 const banquet = [
   "banquet/banquet0.jpg",
   "banquet/banquet1.jpg",
-  "banquet/banquet2.jpg",
-  "banquet/banquet3.jpg"
+  "banquet/banquet2.jpg"
 ]
 
 const wine = [
@@ -71,6 +70,7 @@ const { Title } = Typography;
 const { useBreakpoint } = Grid;
 
 function App() {
+ 
   const screens = useBreakpoint();
   const [language, setLanguage] = useState(UA)
 
@@ -102,7 +102,7 @@ function App() {
       <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} style={{display:'flex', justifyContent:'center', padding: '0 8px 0 8px'}}>
         <Col >
           <Tabs type="card" defaultActiveKey="1">
-            <TabPane tab="Меню" key="1">
+            <TabPane tab={language === EN ? "Menu" : "Меню"} key="1">
               <div 
                 className={'animate__animated  animate__backInRight'}
                 style={{ 
@@ -129,35 +129,10 @@ function App() {
                 </div>
               </div>
             </TabPane>
-            {/* <TabPane tab="Menu En" key="2">
-              <div 
-                className={'animate__animated  animate__backInRight'}
-                style={{ 
-                  display: 'flex',
-                  justifyContent: 'center'
-                }}>
-                <div 
-                  style={{ 
-                    overflow: 'auto',
-                    height: 'calc(100vh - 120px)',
-                    width: screens.xxl ? '50%' : 
-                        screens.xl ? '60%' : 
-                        screens.lg ? '70%' : 
-                        screens.md ? '80%' :  
-                        screens.sm ? '90%' :  
-                        screens.xs && '100%' 
-                  }}>
-                    {menuEN.map(item => 
-                        <Image
-                          preview={false}
-                          width='100%'
-                          src={item}
-                        />
-                      )}
-                </div>
-              </div>
-            </TabPane> */}
-            <TabPane tab="Алкоголь" key="3">
+           {
+             language === UA && (
+              <>
+              <TabPane tab="Алкоголь" key="3">
               <div 
                 className={'animate__animated  animate__backInRight'}
                 style={{ 
@@ -241,6 +216,10 @@ function App() {
                 </div>
               </div>
             </TabPane>
+              </> 
+             )
+           }
+            
           
 
             {/* <TabPane tab="Банкет" key="3">
