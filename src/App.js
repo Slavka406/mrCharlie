@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react'
 import 'antd/dist/antd.css'
 import 'animate.css'
