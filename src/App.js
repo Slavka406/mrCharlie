@@ -1,9 +1,12 @@
-import { Tabs, Typography, Image, Grid, Dropdown, Button, Menu } from 'antd';
-import 'antd/dist/antd.css';
+import React from 'react'
+import 'antd/dist/antd.css'
 import "animate.css"
 import { useState } from 'react'
-import { DownOutlined } from '@ant-design/icons';
+import { DownOutlined } from '@ant-design/icons'
 import { Row, Col, } from '@qonsoll/react-design'
+import { Tabs, Typography, Image, Grid, Dropdown, Button, Menu } from 'antd'
+
+
 
 const UA = 'UA'
 const EN = 'EN'
@@ -66,30 +69,32 @@ const menuMap = {
   UA: menuUA
 }
 
-const { TabPane } = Tabs;
-const { Title } = Typography;
-const { useBreakpoint } = Grid;
+const { TabPane } = Tabs
+const { Title } = Typography
+const { useBreakpoint } = Grid
 
 function App() {
-  const screens = useBreakpoint();
+  const screens = useBreakpoint()
   const [language, setLanguage] = useState(UA)
 
   const menu = (
-  <Menu onClick={(e) => {setLanguage(e?.key)}}>
-    <Menu.Item key={EN} >
-      {EN}
-    </Menu.Item>
-    <Menu.Item key={UA} >
-      {UA}
-    </Menu.Item>
-  </Menu>
-);
+    <Menu onClick={(e) => { setLanguage(e?.key) }}>
+      <Menu.Item key={EN} >
+        {EN}
+      </Menu.Item>
+      <Menu.Item key={UA} >
+        {UA}
+      </Menu.Item>
+    </Menu>
+  )
+
+
 
   return (
-    <div style={{backgroundImage: '0001.jpg'}}>
-      <Row v='center' display='flex' style={{padding: '8px 8px 8px 8px', background: '#e2d2bf', marginBottom: '8px'}}>        
+    <div style={{ backgroundImage: '0001.jpg' }}>
+      <Row v='center' display='flex' style={{ padding: '8px 8px 8px 8px', background: '#e2d2bf', marginBottom: '8px' }}>
         <Col>
-          <Title level={3} style={{color: '#522e24', marginBottom: 0}}>Mr. Charlie</Title>
+          <Title level={3} style={{ color: '#522e24', marginBottom: 0 }}>Mr. Charlie</Title>
         </Col>
         <Col cw='auto'>
           <Dropdown overlay={menu}>
@@ -99,33 +104,34 @@ function App() {
           </Dropdown>
         </Col>
       </Row>
-      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} style={{display:'flex', justifyContent:'center', padding: '0 8px 0 8px'}}>
+      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }} style={{ display: 'flex', justifyContent: 'center', padding: '0 8px 0 8px' }}>
         <Col >
           <Tabs type="card" defaultActiveKey="1">
             <TabPane tab="Меню" key="1">
-              <div 
+              <div
                 className={'animate__animated  animate__backInRight'}
-                style={{ 
+                style={{
                   display: 'flex',
                   justifyContent: 'center'
                 }}>
-                <div style={{ 
+                <div style={{
                   overflowY: 'auto',
                   height: 'calc(100vh - 120px)',
-                  width: screens.xxl ? '50%' : 
-                        screens.xl ? '60%' : 
-                        screens.lg ? '70%' : 
-                        screens.md ? '80%' :  
-                        screens.sm ? '90%' :  
-                        screens.xs && '100vw' 
-                  }}>
-                   {menuMap[language].map(item => 
-                      <Image
-                        preview={false}
-                        width='100%'
-                        src={item}
-                      />
-                    )}
+                  width: screens.xxl ? '50%' :
+                    screens.xl ? '60%' :
+                      screens.lg ? '70%' :
+                        screens.md ? '80%' :
+                          screens.sm ? '90%' :
+                            screens.xs && '100vw'
+                }}>
+                  {menuMap[language].map((item, index) =>
+                    <Image
+                      key={index}
+                      preview={false}
+                      width='100%'
+                      src={item}
+                    />
+                  )}
                 </div>
               </div>
             </TabPane>
@@ -158,90 +164,92 @@ function App() {
               </div>
             </TabPane> */}
             <TabPane tab="Алкоголь" key="3">
-              <div 
+              <div
                 className={'animate__animated  animate__backInRight'}
-                style={{ 
+                style={{
                   display: 'flex',
                   justifyContent: 'center'
                 }}>
-                <div 
-                  style={{ 
+                <div
+                  style={{
                     overflow: 'auto',
                     height: 'calc(100vh - 120px)',
-                    width: screens.xxl ? '50%' : 
-                        screens.xl ? '60%' : 
-                        screens.lg ? '70%' : 
-                        screens.md ? '80%' :  
-                        screens.sm ? '90%' :  
-                        screens.xs && '100%' 
+                    width: screens.xxl ? '50%' :
+                      screens.xl ? '60%' :
+                        screens.lg ? '70%' :
+                          screens.md ? '80%' :
+                            screens.sm ? '90%' :
+                              screens.xs && '100%'
                   }}>
-                    {alcogol.map(item => 
-                        <Image
-                          preview={false}
-                          width='100%'
-                          src={item}
-                        />
-                      )}
+                  {alcogol.map((item, index) =>
+                    <Image
+                      key={index}
+                      preview={false}
+                      width='100%'
+                      src={item}
+                    />
+                  )}
                 </div>
               </div>
             </TabPane>
             <TabPane tab="Винa" key="5">
-              <div 
+              <div
                 className={'animate__animated  animate__backInRight'}
-                style={{ 
+                style={{
                   display: 'flex',
                   justifyContent: 'center'
                 }}>
-                <div 
-                  style={{ 
+                <div
+                  style={{
                     overflow: 'auto',
                     height: 'calc(100vh - 120px)',
-                    width: screens.xxl ? '50%' : 
-                        screens.xl ? '60%' : 
-                        screens.lg ? '70%' : 
-                        screens.md ? '80%' :  
-                        screens.sm ? '90%' :  
-                        screens.xs && '100%' 
+                    width: screens.xxl ? '50%' :
+                      screens.xl ? '60%' :
+                        screens.lg ? '70%' :
+                          screens.md ? '80%' :
+                            screens.sm ? '90%' :
+                              screens.xs && '100%'
                   }}>
-                    {wine.map(item => 
-                        <Image
-                          preview={false}
-                          width='100%'
-                          src={item}
-                        />
-                      )}
+                  {wine.map((item, index) =>
+                    <Image
+                      key={index}
+                      preview={false}
+                      width='100%'
+                      src={item}
+                    />
+                  )}
                 </div>
               </div>
             </TabPane>
             <TabPane tab="Банкетне" key="4">
-              <div 
+              <div
                 className={'animate__animated  animate__backInRight'}
-                style={{ 
+                style={{
                   display: 'flex',
                   justifyContent: 'center'
                 }}>
-                <div 
-                  style={{ 
+                <div
+                  style={{
                     overflow: 'auto',
                     height: 'calc(100vh - 120px)',
-                    width: screens.xxl ? '50%' : 
-                        screens.xl ? '60%' : 
-                        screens.lg ? '70%' : 
-                        screens.md ? '80%' :  
-                        screens.sm ? '90%' :  
-                        screens.xs && '100%' 
+                    width: screens.xxl ? '50%' :
+                      screens.xl ? '60%' :
+                        screens.lg ? '70%' :
+                          screens.md ? '80%' :
+                            screens.sm ? '90%' :
+                              screens.xs && '100%'
                   }}>
-                    {banquet.map(item => 
-                        <Image
-                          preview={false}
-                          width='100%'
-                          src={item}
-                        />
-                      )}
+                  {banquet.map((item, index) =>
+                    <Image
+                      key={index}
+                      preview={false}
+                      width='100%'
+                      src={item}
+                    />
+                  )}
                 </div>
               </div>
             </TabPane>
-          
 
             {/* <TabPane tab="Банкет" key="3">
               <Image
@@ -253,7 +261,7 @@ function App() {
         </Col>
       </Row>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
