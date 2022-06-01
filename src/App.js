@@ -1,30 +1,33 @@
 /* eslint-disable prettier/prettier */
-import React from 'react'
+
 import 'antd/dist/antd.css'
 import 'animate.css'
-import { useState } from 'react'
+
+import { Button, Dropdown, Grid, Image, Menu, Tabs, Typography } from 'antd'
+import { Col, Row } from '@qonsoll/react-design'
+
 import { DownOutlined } from '@ant-design/icons'
-import { Row, Col } from '@qonsoll/react-design'
-import { Tabs, Typography, Image, Grid, Dropdown, Button, Menu } from 'antd'
+import React from 'react'
+import { useState } from 'react'
 
 const UA = 'UA'
 const EN = 'EN'
 
 const menuUA = [
-  'menuUA/Str1.jpg',
-  'menuUA/str2.jpg',
-  'menuUA/str3.jpg',
-  'menuUA/str4.jpg',
-  'menuUA/str5.jpg',
-  'menuUA/str6.jpg',
-  'menuUA/str7.jpg',
-  'menuUA/str8.jpg',
-  'menuUA/str9.jpg',
-  'menuUA/str10.jpg',
-  'menuUA/str11.jpg',
-  'menuUA/str12.jpg',
-  'menuUA/str13.jpg',
-  'menuUA/str14.jpg'
+  'menuUA/Str1.jpeg',
+  'menuUA/str2.jpeg',
+  'menuUA/str3.jpeg',
+  'menuUA/str4.jpeg',
+  'menuUA/str5.jpeg',
+  'menuUA/str6.jpeg',
+  'menuUA/str7.jpeg',
+  'menuUA/str8.jpeg',
+  'menuUA/str9.jpeg',
+  'menuUA/str10.jpeg',
+  'menuUA/str11.jpeg',
+  'menuUA/str12.jpeg',
+  'menuUA/str13.jpeg',
+  'menuUA/str14.jpeg'
 ]
 
 const menuEN = [
@@ -53,8 +56,13 @@ const alcogol = [
 
 const banquet = [
   'banquet/banquet0.jpg',
-  'banquet/banquet1.jpg',
-  'banquet/banquet2.jpg'
+  'banquet/banquet1.jpeg',
+  'banquet/banquet2.jpeg'
+]
+
+const thaiMenu = [
+  'thaiMenu/thaiMenu.jpeg',
+  'thaiMenu/thaiMenu2.jpeg'
 ]
 
 const wine = ['wine/redWine.jpg', 'wine/whiteWine.jpg']
@@ -184,7 +192,7 @@ function App() {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tab="Винa" key="5">
+                <TabPane tab="Винa" key="4">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
@@ -218,7 +226,7 @@ function App() {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tab="Банкетне" key="4">
+                <TabPane tab="Банкетне" key="5">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
@@ -242,6 +250,40 @@ function App() {
                           : screens.xs && '100%'
                       }}>
                       {banquet.map((item, index) => (
+                        <Image
+                          key={index}
+                          preview={false}
+                          width="100%"
+                          src={item}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </TabPane>
+                <TabPane tab="Тайське меню" key="6">
+                  <div
+                    className={'animate__animated  animate__backInRight'}
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center'
+                    }}>
+                    <div
+                      style={{
+                        overflow: 'auto',
+                        height: 'calc(100vh - 120px)',
+                        width: screens.xxl
+                          ? '50%'
+                          : screens.xl
+                          ? '60%'
+                          : screens.lg
+                          ? '70%'
+                          : screens.md
+                          ? '80%'
+                          : screens.sm
+                          ? '90%'
+                          : screens.xs && '100%'
+                      }}>
+                      {thaiMenu.map((item, index) => (
                         <Image
                           key={index}
                           preview={false}
