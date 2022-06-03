@@ -121,7 +121,19 @@ function App() {
           padding: '0 8px 0 8px'
         }}>
         <Col>
-          <Tabs type="card" defaultActiveKey="1">
+          <Tabs type="card" defaultActiveKey="1" style={{
+                    width: screens.xxl
+                      ? '50%'
+                      : screens.xl
+                      ? '60%'
+                      : screens.lg
+                      ? '70%'
+                      : screens.md
+                      ? '80%'
+                      : screens.sm
+                      ? '90%'
+                      : screens.xs && '100vw'
+                  }}>
             <TabPane tab={language === EN ? 'Menu' : 'Меню'} key="1">
               <div
                 className={'animate__animated  animate__backInRight'}
