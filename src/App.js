@@ -14,20 +14,20 @@ const UA = 'UA'
 const EN = 'EN'
 
 const menuUA = [
-  'menuUA/Str1.jpeg',
-  'menuUA/str2.jpeg',
-  'menuUA/str3.jpeg',
-  'menuUA/str4.jpeg',
-  'menuUA/str5.jpeg',
-  'menuUA/str6.jpeg',
-  'menuUA/str7.jpeg',
-  'menuUA/str8.jpeg',
-  'menuUA/str9.jpeg',
-  'menuUA/str10.jpeg',
-  'menuUA/str11.jpeg',
-  'menuUA/str12.jpeg',
-  'menuUA/str13.jpeg',
-  'menuUA/str14.jpeg'
+  'menuUA/Str1.jpg',
+  'menuUA/str2.jpg',
+  'menuUA/str3.jpg',
+  'menuUA/str4.jpg',
+  'menuUA/str5.jpg',
+  'menuUA/str6.jpg',
+  'menuUA/str7.jpg',
+  'menuUA/str8.jpg',
+  'menuUA/str9.jpg',
+  'menuUA/str10.jpg',
+  'menuUA/str11.jpg',
+  'menuUA/str12.jpg',
+  'menuUA/str13.jpg',
+  'menuUA/str14.jpg'
 ]
 
 const menuEN = [
