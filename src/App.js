@@ -56,13 +56,13 @@ const alcogol = [
 
 const banquet = [
   'banquet/banquet0.jpg',
-  'banquet/banquet1.jpeg',
-  'banquet/banquet2.jpeg'
+  'banquet/banquet1.jpg',
+  'banquet/banquet2.jpg'
 ]
 
 const thaiMenu = [
-  'thaiMenu/thaiMenu.jpeg',
-  'thaiMenu/thaiMenu2.jpeg'
+  'thaiMenu/thaiMenu.jpg',
+  'thaiMenu/thaiMenu2.jpg'
 ]
 
 const wine = ['wine/redWine.jpg', 'wine/whiteWine.jpg']
