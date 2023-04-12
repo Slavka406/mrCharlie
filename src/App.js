@@ -35,16 +35,16 @@ const menuEN = [
   'menuEN/str2.jpg',
   'menuEN/str3.jpg',
   'menuEN/str4.jpg',
-  'menuEN/str5_.jpg',
-  'menuEN/str6_.jpg',
-  'menuEN/str7_.jpg',
-  'menuEN/str8_.jpg',
-  'menuEN/str9_.jpg',
-  'menuEN/str10_.jpg',
-  'menuEN/str11_.jpg',
-  'menuEN/str12_.jpg',
-  'menuEN/str13_.jpg',
-  'menuEN/str14_.jpg'
+  'menuEN/str5.jpg',
+  'menuEN/str6.jpg',
+  'menuEN/str7.jpg',
+  'menuEN/str8.jpg',
+  'menuEN/str9.jpg',
+  'menuEN/str10.jpg',
+  'menuEN/str11.jpg',
+  'menuEN/str12.jpg',
+  'menuEN/str13.jpg',
+  'menuEN/str14.jpg'
 ]
 
 const alcogol = [
@@ -61,11 +61,28 @@ const banquet = [
 ]
 
 const thaiMenu = [
-  'thaiMenu/thaiMenu.jpg',
-  'thaiMenu/thaiMenu2.jpg'
+  'thaiMenu/thaiMenu1.jpg',
+  'thaiMenu/thaiMenu2.jpg',
+  'thaiMenu/thaiMenu3.jpg',
+  'thaiMenu/thaiMenu4.jpg',
+  'thaiMenu/thaiMenu5.jpg',
+  'thaiMenu/thaiMenu6.jpg',
+  'thaiMenu/thaiMenu7.jpg',
+  'thaiMenu/thaiMenu8.jpg',
 ]
 
 const wine = ['wine/redWine.jpg', 'wine/whiteWine.jpg']
+
+const sushi = [
+  'sushi/sushi1.jpg',
+  'sushi/sushi2.jpg',
+  'sushi/sushi3.jpg',
+  'sushi/sushi4.jpg',
+  'sushi/sushi5.jpg',
+  'sushi/sushi6.jpg',
+  'sushi/sushi7.jpg',
+  'sushi/sushi8.jpg'
+]
 
 const menuMap = {
   EN: menuEN,
@@ -296,6 +313,40 @@ function App() {
                           : screens.xs && '100%'
                       }}>
                       {thaiMenu.map((item, index) => (
+                        <Image
+                          key={index}
+                          preview={false}
+                          width="100%"
+                          src={item}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </TabPane>
+                <TabPane tab="Суші" key="7">
+                  <div
+                    className={'animate__animated  animate__backInRight'}
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center'
+                    }}>
+                    <div
+                      style={{
+                        overflow: 'auto',
+                        height: 'calc(100vh - 120px)',
+                        width: screens.xxl
+                          ? '50%'
+                          : screens.xl
+                          ? '60%'
+                          : screens.lg
+                          ? '70%'
+                          : screens.md
+                          ? '80%'
+                          : screens.sm
+                          ? '90%'
+                          : screens.xs && '100%'
+                      }}>
+                      {sushi.map((item, index) => (
                         <Image
                           key={index}
                           preview={false}
