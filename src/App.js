@@ -84,6 +84,17 @@ const sushi = [
   'sushi/sushi8.jpg'
 ]
 
+const barCard = [
+  'barCard/barCard1.jpg',
+  'barCard/barCard2.jpg',
+  'barCard/barCard3.jpg',
+  'barCard/barCard4.jpg',
+  'barCard/barCard5.jpg',
+  'barCard/barCard6.jpg',
+  'barCard/barCard7.jpg',
+  'barCard/barCard8.jpg'
+]
+
 const menuMap = {
   EN: menuEN,
   UA: menuUA
@@ -255,7 +266,41 @@ function App() {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tab="Банкетне" key="5">
+                <TabPane tab="Барна карта" key="5">
+                  <div
+                    className={'animate__animated  animate__backInRight'}
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center'
+                    }}>
+                    <div
+                      style={{
+                        overflow: 'auto',
+                        height: 'calc(100vh - 120px)',
+                        width: screens.xxl
+                          ? '50%'
+                          : screens.xl
+                          ? '60%'
+                          : screens.lg
+                          ? '70%'
+                          : screens.md
+                          ? '80%'
+                          : screens.sm
+                          ? '90%'
+                          : screens.xs && '100%'
+                      }}>
+                      {barCard.map((item, index) => (
+                        <Image
+                          key={index}
+                          preview={false}
+                          width="100%"
+                          src={item}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </TabPane>
+                <TabPane tab="Банкетне" key="6">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
@@ -289,7 +334,7 @@ function App() {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tab="Тайське меню" key="6">
+                <TabPane tab="Тайське меню" key="7">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
@@ -323,7 +368,7 @@ function App() {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tab="Суші" key="7">
+                <TabPane tab="Суші" key="8">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
