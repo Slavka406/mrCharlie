@@ -198,8 +198,7 @@ function App() {
             </TabPane>
             {language === UA && (
               <>
-                {/* Commented becouse of bar card adding */}
-                {/* <TabPane tab="Алкоголь" key="3">
+                <TabPane tab="Алкоголь" key="3">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
@@ -232,8 +231,8 @@ function App() {
                       ))}
                     </div>
                   </div>
-                </TabPane> */}
-                <TabPane tab="Винa" key="3">
+                </TabPane>
+                <TabPane tab="Винa" key="4">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
@@ -267,7 +266,7 @@ function App() {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tab="Барна карта" key="4">
+                <TabPane tab="Барна карта" key="5">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
@@ -301,7 +300,7 @@ function App() {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tab="Банкетне" key="5">
+                <TabPane tab="Банкетне" key="6">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
@@ -335,7 +334,7 @@ function App() {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tab="Тайське меню" key="6">
+                <TabPane tab="Тайське меню" key="7">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
@@ -369,7 +368,7 @@ function App() {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tab="Суші" key="7">
+                <TabPane tab="Суші" key="8">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
