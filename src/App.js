@@ -60,29 +60,57 @@ const banquet = [
   'banquet/banquet2.jpg'
 ]
 
-const thaiMenu = [
-  'thaiMenu/thaiMenu1.jpg',
-  'thaiMenu/thaiMenu2.jpg',
-  'thaiMenu/thaiMenu3.jpg',
-  'thaiMenu/thaiMenu4.jpg',
-  'thaiMenu/thaiMenu5.jpg',
-  'thaiMenu/thaiMenu6.jpg',
-  'thaiMenu/thaiMenu7.jpg',
-  'thaiMenu/thaiMenu8.jpg',
+const asianCuisine = [
+  'asianCuisine/asianMenu1.jpg',
+  'asianCuisine/asianMenu2.jpg',
+  'asianCuisine/asianMenu3.jpg',
+  'asianCuisine/asianMenu4.jpg',
+  'asianCuisine/asianMenu5.jpg',
+  'asianCuisine/asianMenu6.jpg',
+  'asianCuisine/asianMenu7.jpg',
+  'asianCuisine/asianMenu8.jpg',
+  'asianCuisine/asianMenu9.jpg',
+  'asianCuisine/asianMenu10.jpg',
+  'asianCuisine/asianMenu11.jpg',
+  'asianCuisine/asianMenu12.jpg',
+  'asianCuisine/asianMenu13.jpg',
+  'asianCuisine/asianMenu14.jpg',
+  'asianCuisine/asianMenu15.jpg',
+  'asianCuisine/asianMenu16.jpg',
+  'asianCuisine/asianMenu17.jpg',
+  'asianCuisine/asianMenu18.jpg',
+  'asianCuisine/asianMenu19.jpg',
+  'asianCuisine/asianMenu20.jpg',
+  'asianCuisine/asianMenu21.jpg',
+  'asianCuisine/asianMenu22.jpg',
+  'asianCuisine/asianMenu23.jpg',
+  'asianCuisine/asianMenu24.jpg',
+  'asianCuisine/asianMenu25.jpg',
+  'asianCuisine/asianMenu26.jpg',
 ]
+// const thaiMenu = [
+//   'thaiMenu/thaiMenu1.jpg',
+//   'thaiMenu/thaiMenu2.jpg',
+//   'thaiMenu/thaiMenu3.jpg',
+//   'thaiMenu/thaiMenu4.jpg',
+//   'thaiMenu/thaiMenu5.jpg',
+//   'thaiMenu/thaiMenu6.jpg',
+//   'thaiMenu/thaiMenu7.jpg',
+//   'thaiMenu/thaiMenu8.jpg',
+// ]
 
 const wine = ['wine/redWine.jpg', 'wine/whiteWine.jpg']
 
-const sushi = [
-  'sushi/sushi1.jpg',
-  'sushi/sushi2.jpg',
-  'sushi/sushi3.jpg',
-  'sushi/sushi4.jpg',
-  'sushi/sushi5.jpg',
-  'sushi/sushi6.jpg',
-  'sushi/sushi7.jpg',
-  'sushi/sushi8.jpg'
-]
+// const sushi = [
+//   'sushi/sushi1.jpg',
+//   'sushi/sushi2.jpg',
+//   'sushi/sushi3.jpg',
+//   'sushi/sushi4.jpg',
+//   'sushi/sushi5.jpg',
+//   'sushi/sushi6.jpg',
+//   'sushi/sushi7.jpg',
+//   'sushi/sushi8.jpg'
+// ]
 
 const barCard = [
   'barCard/barCard1.jpg',
@@ -334,7 +362,41 @@ function App() {
                     </div>
                   </div>
                 </TabPane>
-                <TabPane tab="Тайське меню" key="7">
+                <TabPane tab="Азіатська кухня" key="7">
+                  <div
+                    className={'animate__animated  animate__backInRight'}
+                    style={{
+                      display: 'flex',
+                      justifyContent: 'center'
+                    }}>
+                    <div
+                      style={{
+                        overflow: 'auto',
+                        height: 'calc(100vh - 120px)',
+                        width: screens.xxl
+                          ? '50%'
+                          : screens.xl
+                          ? '60%'
+                          : screens.lg
+                          ? '70%'
+                          : screens.md
+                          ? '80%'
+                          : screens.sm
+                          ? '90%'
+                          : screens.xs && '100%'
+                      }}>
+                      {asianCuisine.map((item, index) => (
+                        <Image
+                          key={index}
+                          preview={false}
+                          width="100%"
+                          src={item}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </TabPane>
+                {/* <TabPane tab="Тайське меню" key="7">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
@@ -367,8 +429,8 @@ function App() {
                       ))}
                     </div>
                   </div>
-                </TabPane>
-                <TabPane tab="Суші" key="8">
+                </TabPane> */}
+                {/* <TabPane tab="Суші" key="8">
                   <div
                     className={'animate__animated  animate__backInRight'}
                     style={{
@@ -401,7 +463,7 @@ function App() {
                       ))}
                     </div>
                   </div>
-                </TabPane>
+                </TabPane> */}
               </>
             )}
 
